@@ -5,6 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
         abstractcreature.cpp \
+        consumable.cpp \
         direction.cpp \
         dungeonlevel.cpp \
         dungeonlevelbuilder.cpp \
@@ -13,10 +14,12 @@ SOURCES += \
         main.cpp \
         menuinterface.cpp \
         room.cpp \
-        roomedge.cpp
+        roomedge.cpp \
+        weapon.cpp
 
 HEADERS += \
     abstractcreature.h \
+    consumable.h \
     direction.h \
     dungeonlevel.h \
     dungeonlevelbuilder.h \
@@ -24,4 +27,5 @@ HEADERS += \
     item.h \
     menuinterface.h \
     room.h \
-    roomedge.h
+    roomedge.h \
+    weapon.h

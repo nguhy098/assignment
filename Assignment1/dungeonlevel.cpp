@@ -18,7 +18,7 @@ int DungeonLevel::height() const{
     return _height;
 }
 std::string DungeonLevel::name() const{
-    return "name";
+    return _name;
 }
 std::string DungeonLevel::description() const{
     return "description";

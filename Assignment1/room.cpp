@@ -26,3 +26,10 @@ AbstractCreature Room::creature() const{
 void Room::setCreature(const AbstractCreature& newCreature){
     _newCreature;
 }
+RoomEdge Room::setEdge(RoomEdge, Direction){
+
+}
+RoomEdge Room::edgeAt(Direction){
+    Direction f;
+
+}
