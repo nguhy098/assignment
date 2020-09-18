@@ -19,7 +19,7 @@ public:
     void setCreature(const AbstractCreature& newCreature);
     RoomEdge setEdge(RoomEdge, Direction);
     RoomEdge edgeAt(Direction);
-
+    enum class Direction : unsigned { };
 
 private:
     int _id;

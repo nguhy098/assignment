@@ -3,6 +3,7 @@
 Room::Room(const int id): _id{id}, _newItem{}, _newCreature{}{
 
 }
+enum class Direction : unsigned { ... };
 
 
 std::string Room::description() const{

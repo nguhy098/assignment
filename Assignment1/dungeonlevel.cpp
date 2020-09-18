@@ -1,4 +1,5 @@
 #include "dungeonlevel.h"
+
 using namespace std;
 
 DungeonLevel::DungeonLevel(std::string name, int width, int height): _name{name}, _width{width}, _height{height}
@@ -6,7 +7,11 @@ DungeonLevel::DungeonLevel(std::string name, int width, int height): _name{name}
 
 }
 bool DungeonLevel::addRoom(Room){
+    if (Room == null){
+        return false;
+    }
     return true;
+
 }
 Room DungeonLevel::retrieveRoom(int) const{
     return _x;
