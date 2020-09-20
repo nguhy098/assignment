@@ -5,7 +5,8 @@
 #include "item.h"
 #include "abstractcreature.h"
 #include "roomedge.h"
-#include "direction.h"
+
+
 class Room
 {
 public:
@@ -19,7 +20,7 @@ public:
     void setCreature(const AbstractCreature& newCreature);
     RoomEdge setEdge(RoomEdge, Direction);
     RoomEdge edgeAt(Direction);
-    enum class Direction : unsigned { };
+    enum Direction : unsigned { };
 
 private:
     int _id;

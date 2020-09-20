@@ -3,7 +3,7 @@
 Room::Room(const int id): _id{id}, _newItem{}, _newCreature{}{
 
 }
-enum class Direction : unsigned { ... };
+enum Room::Direction unsigner{};
 
 
 std::string Room::description() const{
@@ -34,3 +34,4 @@ RoomEdge Room::edgeAt(Direction){
     Direction f;
 
 }
+
