@@ -11,9 +11,9 @@ class DungeonLevelBuilder
 public:
     DungeonLevelBuilder(std::string name, int width, int height);
     virtual Room buildRoom(int id) const;
-    virtual void buildDoorway(Room origin, Room destination, Direction direction, MoveConstraints constraints);
-    virtual void buildEntrance(Room room, Direction direction);
-    virtual void buildExit(Room room, Direction direction);
+    //virtual void buildDoorway(Room origin, Room destination, Direction direction, MoveConstraints constraints);
+   // virtual void buildEntrance(Room room, Direction direction);
+   // virtual void buildExit(Room room, Direction direction);
     void buildItem(Room);
     void buildCreature(Room);
     DungeonLevel getDungonLevel();
@@ -26,6 +26,6 @@ private:
     Room _origin;
     Room _room;
 
-}
+};
 
 #endif // DUNGEONLEVELBUILDER_H

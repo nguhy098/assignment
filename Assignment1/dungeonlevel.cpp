@@ -7,12 +7,12 @@ DungeonLevel::DungeonLevel(std::string name, int width, int height): _name{name}
 
 }
 bool DungeonLevel::addRoom(Room){
-    if (Room == null){
+    //if (Room == null){
         return false;
     }
-    return true;
+    //return true;
 
-}
+
 Room DungeonLevel::retrieveRoom(int) const{
     return _x;
 }

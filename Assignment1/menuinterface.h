@@ -7,12 +7,13 @@ class MenuInterface
 {
 public:
     MenuInterface();
+    MenuInterface(std::ostream &display, std::istream &input);
     MenuInterface(const MenuInterface &) = default;
 
     std::string ExampLevel();
     void displayWelcome(const std::string &author, const std::string &title);
     void run();
-    DungeonLevelBuilder Random(std::string name, int width, int height);
+    DungeonLevelBuilder* Random(std::string name, int width, int height);
 private:
     std::string _author;
     std::string _title;

@@ -18,8 +18,8 @@ public:
     void setItem(const Item& newItem);
     AbstractCreature creature() const;
     void setCreature(const AbstractCreature& newCreature);
-    RoomEdge setEdge(RoomEdge, Direction);
-    RoomEdge edgeAt(Direction);
+    //RoomEdge setEdge(RoomEdge, Direction);
+    //RoomEdge edgeAt(Direction);
     enum Direction : unsigned { };
 
 private:

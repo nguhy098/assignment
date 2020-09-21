@@ -11,6 +11,6 @@ char RoomEdge::displayCharacter() const{
     return 0;
 }
 bool RoomEdge::isPassage() const{
-    if(RoomEdge::)
+    //if(RoomEdge::)
     return true;
 }

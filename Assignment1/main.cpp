@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
 
-    MenuInterface menu{};
-    menu.run();
+    auto menu = new MenuInterface(std::cout, std::cin);
+    menu -> displayWelcome("Kate", "Dungeon Game");
+    menu ->run();
 }
