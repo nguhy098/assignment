@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-
-    auto menu = new MenuInterface(std::cout, std::cin);
+    auto menu = new MenuInterface();
     menu -> displayWelcome("Kate", "Dungeon Game");
     menu ->run();
+
 }

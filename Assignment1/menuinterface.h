@@ -7,7 +7,6 @@ class MenuInterface
 {
 public:
     MenuInterface();
-    MenuInterface(std::ostream &display, std::istream &input);
     MenuInterface(const MenuInterface &) = default;
 
     std::string ExampLevel();

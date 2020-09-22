@@ -1,10 +1,32 @@
 #include "room.h"
+#include <string>
+#include <vector>
+#include "roomedge.h"
+#include <iostream>
 
 Room::Room(const int id): _id{id}, _newItem{}, _newCreature{}{
 
 }
-enum Room::Direction unsigner{};
+std::vector<RoomEdge> edge{};
+edge.push_back("North");
+edge.push_back("South");
+edge.push_back("West");
+edge.push_back("East");
 
+
+enum class Direction: unsigned {
+    North = 0,
+    South = 1,
+    West = 2,
+    East = 3
+};
+
+std::string Room::setNorth(RoomEdge){
+    RoomEdge(array[0]);
+}
+RoomEdge Room::getNorth(){
+    return
+}
 
 std::string Room::description() const{
     return "--";

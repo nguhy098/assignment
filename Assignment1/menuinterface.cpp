@@ -6,29 +6,22 @@
 #include "room.h"
 using namespace std;
 
-void gameLoop();
-void out(std::string s);
-void outl(std::string s);
-void clear();
-void writeInputCommand(std::string &cmd);
-void onViewWelcome();
-void onViewMainScene();
-void PRESS_ANY_KEY();
+
 
 MenuInterface::MenuInterface() : _author{}, _title{}
 {
 
 }
-MenuInterface::MenuInterface(std::ostream &display, std::istream &input){}
+
 
 void MenuInterface::displayWelcome(const std::string &author, const std::string &title){
     _title = title;
     _author = author;
-    outl("Welcome to:");
-    outl(title);
-    outl("           Developed by");
-    outl(author);
-    out("       COMP 3023 Software Development with C++");
+    std::fstream input("Welcome to:");
+    getline(input, _title);
+    std::fstream input1("           Developed by");
+    getline(input1, _author);
+    std::fstream input4("       COMP 3023 Software Development with C++");
 }
 std::string MenuInterface::ExampLevel(){
     cout << "+----I----+  +---------+  +---------+"
@@ -86,9 +79,6 @@ DungeonLevelBuilder *MenuInterface::Random(std::string name, int width, int heig
 
 }
 void MenuInterface::run() {
-    gameLoop();
-    return;
-
     char input;
     ofstream f;
     f << """What would you like to do? "

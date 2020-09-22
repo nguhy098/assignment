@@ -18,9 +18,17 @@ public:
     void setItem(const Item& newItem);
     AbstractCreature creature() const;
     void setCreature(const AbstractCreature& newCreature);
-    //RoomEdge setEdge(RoomEdge, Direction);
-    //RoomEdge edgeAt(Direction);
-    enum Direction : unsigned { };
+
+    std::string setNorth(RoomEdge);
+    RoomEdge getNorth();
+    void setSouth(RoomEdge);
+    RoomEdge getSouth();
+    void setEast(RoomEdge);
+    RoomEdge getEast();
+    void setWest(RoomEdge);
+    RoomEdge getWest();
+
+    enum class Direction: unsigned {};
 
 private:
     int _id;
