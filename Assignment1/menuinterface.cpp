@@ -51,6 +51,9 @@ std::string MenuInterface::ExampLevel(){
     return "";
 }
 DungeonLevelBuilder *MenuInterface::Random(std::string name, int width, int height){
+    _name = name;
+    _width = width;
+    _height = height;
     std::cout << "What would you like to call the level?";
     cin >> _name;
     std::cout <<"How many rows in *Small dark cave*?";

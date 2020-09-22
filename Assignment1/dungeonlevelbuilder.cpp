@@ -26,7 +26,7 @@ Room DungeonLevelBuilder::buildRoom(int id) const{
    // DungeonLevelBuilder Doorway(std::string name, int width, int height);
 
 
-}
+//}
 void DungeonLevelBuilder::buildItem(Room){
     rand();
 
