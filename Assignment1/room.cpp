@@ -3,15 +3,16 @@
 #include <vector>
 #include "roomedge.h"
 #include <iostream>
+#include <array>
 
-Room::Room(const int id): _id{id}, _newItem{}, _newCreature{}{
+Room::Room(const int id): _id{id}{
+    _newItem = NULL;
 
 }
-std::vector<RoomEdge> edge{};
-edge.push_back("North");
-edge.push_back("South");
-edge.push_back("West");
-edge.push_back("East");
+
+
+
+
 
 
 enum class Direction: unsigned {
@@ -21,12 +22,31 @@ enum class Direction: unsigned {
     East = 3
 };
 
-std::string Room::setNorth(RoomEdge){
-    RoomEdge(array[0]);
+void Room::setNorth(RoomEdge* north){
+    edges[0] = north;
 }
-RoomEdge Room::getNorth(){
-    return
+RoomEdge* Room::getNorth(){
+    return edges[0];
 }
+void Room::setSouth(RoomEdge* south){
+    edges[1] = south;
+}
+RoomEdge* Room::getSouth(){
+    return edges[1];
+}
+void Room::setEast(RoomEdge* east){
+    edges[2] = east;
+}
+RoomEdge* Room::getEast(){
+    return edges[2];
+}
+void Room::setWest(RoomEdge* west){
+    edges[3] = west;
+}
+RoomEdge* Room::getWest(){
+    return edges[3];
+}
+
 
 std::string Room::description() const{
     return "--";
@@ -37,23 +57,17 @@ std::string Room::display() const{
 int Room::id() const{
     return _id;
 }
-Item Room::item() const{
+Item* Room::item() const{
     return _newItem;
 }
-void Room::setItem(const Item& newItem){
-    _newItem;
+void Room::setItem(Item* newItem){
+    _newItem = newItem;
 }
-AbstractCreature Room::creature() const{
+AbstractCreature* Room::creature() const{
     return _newCreature;
 }
-void Room::setCreature(const AbstractCreature& newCreature){
-    _newCreature;
+void Room::setCreature(AbstractCreature* newCreature){
+    _newCreature = newCreature;
 }
-//RoomEdge Room::setEdge(RoomEdge, Direction){
 
-//}
-//RoomEdge Room::edgeAt(Direction){
-    //Direction f;
-
-//}
 

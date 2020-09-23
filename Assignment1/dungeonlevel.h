@@ -3,14 +3,14 @@
 #include <ostream>
 #include <string>
 #include "room.h"
-
+#include <vector>
 
 class DungeonLevel
 {
 public:
     DungeonLevel(std::string name, int width, int height);
-    bool addRoom(Room);
-    Room retrieveRoom(int x) const;
+    bool addRoom(Room*);
+    Room* retrieveRoom(int) const;
     int width() const;
     int height() const;
     int numberOfRooms;
@@ -21,7 +21,9 @@ private:
     std::string _name;
     int _width;
     int _height;
-    int _x;
+
+
+std::vector<Room*> room;
 
 
 

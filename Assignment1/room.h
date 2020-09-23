@@ -5,7 +5,8 @@
 #include "item.h"
 #include "abstractcreature.h"
 #include "roomedge.h"
-
+#include "memory"
+#include "array"
 
 class Room
 {
@@ -14,26 +15,28 @@ public:
     std::string description() const;
     std::string display() const;
     int id() const;
-    Item item() const;
-    void setItem(const Item& newItem);
-    AbstractCreature creature() const;
-    void setCreature(const AbstractCreature& newCreature);
+    Item* item() const;
+    void setItem(Item* newItem);
+    AbstractCreature* creature() const;
+    void setCreature(AbstractCreature* newCreature);
 
-    std::string setNorth(RoomEdge);
-    RoomEdge getNorth();
-    void setSouth(RoomEdge);
-    RoomEdge getSouth();
-    void setEast(RoomEdge);
-    RoomEdge getEast();
-    void setWest(RoomEdge);
-    RoomEdge getWest();
+    void setNorth(RoomEdge* north);
+    RoomEdge* getNorth();
+    void setSouth(RoomEdge* south);
+    RoomEdge* getSouth();
+    void setEast(RoomEdge* east);
+    RoomEdge* getEast();
+    void setWest(RoomEdge* west);
+    RoomEdge* getWest();
 
     enum class Direction: unsigned {};
 
 private:
     int _id;
-    std::string _newItem;
-    std::string _newCreature;
+    Item* _newItem;
+    AbstractCreature* _newCreature;
+
+    std::array<RoomEdge*, 4> edges; //0 North, 1 South, 2 East, 3 West
 
 
 };

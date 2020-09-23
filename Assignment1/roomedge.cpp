@@ -14,3 +14,4 @@ bool RoomEdge::isPassage() const{
     if(DoorWay::connect(opposite)){
     return true;
 }
+

@@ -53,28 +53,60 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Assignment1/abstractcreature.cpp \
+		../Assignment1/alchemistslaboratory.cpp \
+		../Assignment1/basicdungeonlevel.cpp \
+		../Assignment1/basicdungeonlevelbuilder.cpp \
+		../Assignment1/blockeddoorway.cpp \
 		../Assignment1/consumable.cpp \
 		../Assignment1/direction.cpp \
+		../Assignment1/doorway.cpp \
 		../Assignment1/dungeonlevel.cpp \
 		../Assignment1/dungeonlevelbuilder.cpp \
+		../Assignment1/enchantedlibrary.cpp \
 		../Assignment1/game.cpp \
 		../Assignment1/item.cpp \
+		../Assignment1/lockeddoor.cpp \
+		../Assignment1/magicaldungeonlevel.cpp \
+		../Assignment1/magicaldungeonlevelbuilder.cpp \
+		../Assignment1/magicwall.cpp \
 		../Assignment1/main.cpp \
 		../Assignment1/menuinterface.cpp \
+		../Assignment1/onewaydoor.cpp \
+		../Assignment1/opendoorway.cpp \
+		../Assignment1/quartzchamber.cpp \
+		../Assignment1/rockchamber.cpp \
+		../Assignment1/rockwall.cpp \
 		../Assignment1/room.cpp \
 		../Assignment1/roomedge.cpp \
+		../Assignment1/wall.cpp \
 		../Assignment1/weapon.cpp 
 OBJECTS       = abstractcreature.o \
+		alchemistslaboratory.o \
+		basicdungeonlevel.o \
+		basicdungeonlevelbuilder.o \
+		blockeddoorway.o \
 		consumable.o \
 		direction.o \
+		doorway.o \
 		dungeonlevel.o \
 		dungeonlevelbuilder.o \
+		enchantedlibrary.o \
 		game.o \
 		item.o \
+		lockeddoor.o \
+		magicaldungeonlevel.o \
+		magicaldungeonlevelbuilder.o \
+		magicwall.o \
 		main.o \
 		menuinterface.o \
+		onewaydoor.o \
+		opendoorway.o \
+		quartzchamber.o \
+		rockchamber.o \
+		rockwall.o \
 		room.o \
 		roomedge.o \
+		wall.o \
 		weapon.o
 DIST          = ../../../u/5.12.9/clang_64/mkspecs/features/spec_pre.prf \
 		../../../u/5.12.9/clang_64/mkspecs/qdevice.pri \
@@ -241,6 +273,7 @@ DIST          = ../../../u/5.12.9/clang_64/mkspecs/features/spec_pre.prf \
 		../../../u/5.12.9/clang_64/mkspecs/features/qt_config.prf \
 		../../../u/5.12.9/clang_64/mkspecs/macx-clang/qmake.conf \
 		../../../u/5.12.9/clang_64/mkspecs/features/spec_post.prf \
+		../Assignment1/.qmake.stash \
 		../../../u/5.12.9/clang_64/mkspecs/features/exclusive_builds.prf \
 		../../../u/5.12.9/clang_64/mkspecs/features/mac/sdk.prf \
 		../../../u/5.12.9/clang_64/mkspecs/features/toolchain.prf \
@@ -263,26 +296,57 @@ DIST          = ../../../u/5.12.9/clang_64/mkspecs/features/spec_pre.prf \
 		../../../u/5.12.9/clang_64/mkspecs/features/yacc.prf \
 		../../../u/5.12.9/clang_64/mkspecs/features/lex.prf \
 		../Assignment1/Assignment1.pro abstractcreature.h \
+		alchemistslaboratory.h \
+		basicdungeonlevel.h \
+		basicdungeonlevelbuilder.h \
+		blockeddoorway.h \
 		consumable.h \
-		direction.h \
+		doorway.h \
 		dungeonlevel.h \
 		dungeonlevelbuilder.h \
+		enchantedlibrary.h \
 		game.h \
 		item.h \
+		lockeddoor.h \
+		magicaldungeonlevel.h \
+		magicaldungeonlevelbuilder.h \
+		magicwall.h \
 		menuinterface.h \
+		onewaydoor.h \
+		opendoorway.h \
+		quartzchamber.h \
+		rockchamber.h \
+		rockwall.h \
 		room.h \
 		roomedge.h \
+		wall.h \
 		weapon.h ../Assignment1/abstractcreature.cpp \
+		../Assignment1/alchemistslaboratory.cpp \
+		../Assignment1/basicdungeonlevel.cpp \
+		../Assignment1/basicdungeonlevelbuilder.cpp \
+		../Assignment1/blockeddoorway.cpp \
 		../Assignment1/consumable.cpp \
 		../Assignment1/direction.cpp \
+		../Assignment1/doorway.cpp \
 		../Assignment1/dungeonlevel.cpp \
 		../Assignment1/dungeonlevelbuilder.cpp \
+		../Assignment1/enchantedlibrary.cpp \
 		../Assignment1/game.cpp \
 		../Assignment1/item.cpp \
+		../Assignment1/lockeddoor.cpp \
+		../Assignment1/magicaldungeonlevel.cpp \
+		../Assignment1/magicaldungeonlevelbuilder.cpp \
+		../Assignment1/magicwall.cpp \
 		../Assignment1/main.cpp \
 		../Assignment1/menuinterface.cpp \
+		../Assignment1/onewaydoor.cpp \
+		../Assignment1/opendoorway.cpp \
+		../Assignment1/quartzchamber.cpp \
+		../Assignment1/rockchamber.cpp \
+		../Assignment1/rockwall.cpp \
 		../Assignment1/room.cpp \
 		../Assignment1/roomedge.cpp \
+		../Assignment1/wall.cpp \
 		../Assignment1/weapon.cpp
 QMAKE_TARGET  = Assignment1
 DESTDIR       = 
@@ -470,6 +534,7 @@ Makefile: ../Assignment1/Assignment1.pro ../../../u/5.12.9/clang_64/mkspecs/macx
 		../../../u/5.12.9/clang_64/mkspecs/features/qt_config.prf \
 		../../../u/5.12.9/clang_64/mkspecs/macx-clang/qmake.conf \
 		../../../u/5.12.9/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../u/5.12.9/clang_64/mkspecs/features/exclusive_builds.prf \
 		../../../u/5.12.9/clang_64/mkspecs/features/mac/sdk.prf \
 		../../../u/5.12.9/clang_64/mkspecs/features/toolchain.prf \
@@ -658,6 +723,7 @@ Makefile: ../Assignment1/Assignment1.pro ../../../u/5.12.9/clang_64/mkspecs/macx
 ../../../u/5.12.9/clang_64/mkspecs/features/qt_config.prf:
 ../../../u/5.12.9/clang_64/mkspecs/macx-clang/qmake.conf:
 ../../../u/5.12.9/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../u/5.12.9/clang_64/mkspecs/features/exclusive_builds.prf:
 ../../../u/5.12.9/clang_64/mkspecs/features/mac/sdk.prf:
 ../../../u/5.12.9/clang_64/mkspecs/features/toolchain.prf:
@@ -703,6 +769,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -730,11 +797,26 @@ compiler_clean:
 abstractcreature.o: ../Assignment1/abstractcreature.cpp ../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o abstractcreature.o ../Assignment1/abstractcreature.cpp
 
+alchemistslaboratory.o: ../Assignment1/alchemistslaboratory.cpp ../Assignment1/alchemistslaboratory.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o alchemistslaboratory.o ../Assignment1/alchemistslaboratory.cpp
+
+basicdungeonlevel.o: ../Assignment1/basicdungeonlevel.cpp ../Assignment1/basicdungeonlevel.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o basicdungeonlevel.o ../Assignment1/basicdungeonlevel.cpp
+
+basicdungeonlevelbuilder.o: ../Assignment1/basicdungeonlevelbuilder.cpp ../Assignment1/basicdungeonlevelbuilder.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o basicdungeonlevelbuilder.o ../Assignment1/basicdungeonlevelbuilder.cpp
+
+blockeddoorway.o: ../Assignment1/blockeddoorway.cpp ../Assignment1/blockeddoorway.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o blockeddoorway.o ../Assignment1/blockeddoorway.cpp
+
 consumable.o: ../Assignment1/consumable.cpp ../Assignment1/consumable.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o consumable.o ../Assignment1/consumable.cpp
 
-direction.o: ../Assignment1/direction.cpp ../Assignment1/direction.h
+direction.o: ../Assignment1/direction.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o direction.o ../Assignment1/direction.cpp
+
+doorway.o: ../Assignment1/doorway.cpp ../Assignment1/doorway.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o doorway.o ../Assignment1/doorway.cpp
 
 dungeonlevel.o: ../Assignment1/dungeonlevel.cpp ../Assignment1/dungeonlevel.h \
 		../Assignment1/room.h \
@@ -751,6 +833,9 @@ dungeonlevelbuilder.o: ../Assignment1/dungeonlevelbuilder.cpp ../Assignment1/dun
 		../Assignment1/dungeonlevel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dungeonlevelbuilder.o ../Assignment1/dungeonlevelbuilder.cpp
 
+enchantedlibrary.o: ../Assignment1/enchantedlibrary.cpp ../Assignment1/enchantedlibrary.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o enchantedlibrary.o ../Assignment1/enchantedlibrary.cpp
+
 game.o: ../Assignment1/game.cpp ../Assignment1/game.h \
 		../Assignment1/dungeonlevelbuilder.h \
 		../Assignment1/room.h \
@@ -762,6 +847,18 @@ game.o: ../Assignment1/game.cpp ../Assignment1/game.h \
 
 item.o: ../Assignment1/item.cpp ../Assignment1/item.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o item.o ../Assignment1/item.cpp
+
+lockeddoor.o: ../Assignment1/lockeddoor.cpp ../Assignment1/lockeddoor.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o lockeddoor.o ../Assignment1/lockeddoor.cpp
+
+magicaldungeonlevel.o: ../Assignment1/magicaldungeonlevel.cpp ../Assignment1/magicaldungeonlevel.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o magicaldungeonlevel.o ../Assignment1/magicaldungeonlevel.cpp
+
+magicaldungeonlevelbuilder.o: ../Assignment1/magicaldungeonlevelbuilder.cpp ../Assignment1/magicaldungeonlevelbuilder.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o magicaldungeonlevelbuilder.o ../Assignment1/magicaldungeonlevelbuilder.cpp
+
+magicwall.o: ../Assignment1/magicwall.cpp ../Assignment1/magicwall.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o magicwall.o ../Assignment1/magicwall.cpp
 
 main.o: ../Assignment1/main.cpp ../Assignment1/menuinterface.h \
 		../Assignment1/dungeonlevelbuilder.h \
@@ -781,6 +878,21 @@ menuinterface.o: ../Assignment1/menuinterface.cpp ../Assignment1/menuinterface.h
 		../Assignment1/dungeonlevel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o menuinterface.o ../Assignment1/menuinterface.cpp
 
+onewaydoor.o: ../Assignment1/onewaydoor.cpp ../Assignment1/onewaydoor.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o onewaydoor.o ../Assignment1/onewaydoor.cpp
+
+opendoorway.o: ../Assignment1/opendoorway.cpp ../Assignment1/opendoorway.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o opendoorway.o ../Assignment1/opendoorway.cpp
+
+quartzchamber.o: ../Assignment1/quartzchamber.cpp ../Assignment1/quartzchamber.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o quartzchamber.o ../Assignment1/quartzchamber.cpp
+
+rockchamber.o: ../Assignment1/rockchamber.cpp ../Assignment1/rockchamber.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o rockchamber.o ../Assignment1/rockchamber.cpp
+
+rockwall.o: ../Assignment1/rockwall.cpp ../Assignment1/rockwall.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o rockwall.o ../Assignment1/rockwall.cpp
+
 room.o: ../Assignment1/room.cpp ../Assignment1/room.h \
 		../Assignment1/item.h \
 		../Assignment1/abstractcreature.h \
@@ -789,6 +901,9 @@ room.o: ../Assignment1/room.cpp ../Assignment1/room.h \
 
 roomedge.o: ../Assignment1/roomedge.cpp ../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o roomedge.o ../Assignment1/roomedge.cpp
+
+wall.o: ../Assignment1/wall.cpp ../Assignment1/wall.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o wall.o ../Assignment1/wall.cpp
 
 weapon.o: ../Assignment1/weapon.cpp ../Assignment1/weapon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o weapon.o ../Assignment1/weapon.cpp

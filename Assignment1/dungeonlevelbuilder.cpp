@@ -9,29 +9,27 @@ using namespace std;
 DungeonLevelBuilder::DungeonLevelBuilder(std::string name, int width, int height):
     _name{name}, _width{width}, _height{height}, _origin{0}, _room{0}
 {
-
-
-
 }
-Room DungeonLevelBuilder::buildRoom(int id) const{
+
+enum class MoveConstraints : unsigned{
+
+};
+Room* DungeonLevelBuilder::buildRoom(int id) const{
     Room* room = new Room(id);
-    //room ->setEdge(RoomEdge(), Direction());
-    //room ->setEdge(RoomEdge(), Direction());
-    //room ->setEdge(RoomEdge(), Direction());
-    //room ->setEdge(RoomEdge(), Direction());
 
-    return _id;
+
+
 }
-//void buildEntrance(Room room, Direction direction){
-   // DungeonLevelBuilder Doorway(std::string name, int width, int height);
+void buildEntrance(Room* room, Room::Direction direction){
+    DungeonLevelBuilder Doorway(std::string name, int width, int height);
 
 
-//}
-void DungeonLevelBuilder::buildItem(Room){
+}
+void DungeonLevelBuilder::buildItem(Room* item){
     rand();
 
 }
-void DungeonLevelBuilder::buildCreature(Room){
+void DungeonLevelBuilder::buildCreature(Room* creature){
 
 }
 DungeonLevel DungeonLevelBuilder::getDungonLevel(){
