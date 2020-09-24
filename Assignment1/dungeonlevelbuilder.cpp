@@ -12,12 +12,28 @@ DungeonLevelBuilder::DungeonLevelBuilder(std::string name, int width, int height
 }
 
 enum class MoveConstraints : unsigned{
-
+    None = 0,
+    OriginImpassable = 1,
+    DestinationImpassable = 2,
+    OriginLocked = 4,
+    DestinationLocked = 8,
 };
 Room* DungeonLevelBuilder::buildRoom(int id) const{
-    Room* room = new Room(id);
 
+}
 
+void DungeonLevelBuilder::buildDoorway(Room *origin, Room *destination, Room::Direction direction, DungeonLevelBuilder::MoveConstraints constraints)
+{
+
+}
+
+void DungeonLevelBuilder::buildEntrance(Room *room, Room::Direction direction)
+{
+
+}
+
+void DungeonLevelBuilder::buildExit(Room *room, Room::Direction direction)
+{
 
 }
 void buildEntrance(Room* room, Room::Direction direction){

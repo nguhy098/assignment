@@ -1,11 +1,12 @@
 #ifndef ROCKCHAMBER_H
 #define ROCKCHAMBER_H
+#include "room.h"
 
-
-class RockChamber
+class RockChamber : public Room
 {
 public:
-    RockChamber();
+    RockChamber(int id);
+    std::string description();
 };
 
 #endif // ROCKCHAMBER_H

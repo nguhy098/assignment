@@ -58,7 +58,6 @@ SOURCES       = ../Assignment1/abstractcreature.cpp \
 		../Assignment1/basicdungeonlevelbuilder.cpp \
 		../Assignment1/blockeddoorway.cpp \
 		../Assignment1/consumable.cpp \
-		../Assignment1/direction.cpp \
 		../Assignment1/doorway.cpp \
 		../Assignment1/dungeonlevel.cpp \
 		../Assignment1/dungeonlevelbuilder.cpp \
@@ -86,7 +85,6 @@ OBJECTS       = abstractcreature.o \
 		basicdungeonlevelbuilder.o \
 		blockeddoorway.o \
 		consumable.o \
-		direction.o \
 		doorway.o \
 		dungeonlevel.o \
 		dungeonlevelbuilder.o \
@@ -326,7 +324,6 @@ DIST          = ../../../u/5.12.9/clang_64/mkspecs/features/spec_pre.prf \
 		../Assignment1/basicdungeonlevelbuilder.cpp \
 		../Assignment1/blockeddoorway.cpp \
 		../Assignment1/consumable.cpp \
-		../Assignment1/direction.cpp \
 		../Assignment1/doorway.cpp \
 		../Assignment1/dungeonlevel.cpp \
 		../Assignment1/dungeonlevelbuilder.cpp \
@@ -797,7 +794,11 @@ compiler_clean:
 abstractcreature.o: ../Assignment1/abstractcreature.cpp ../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o abstractcreature.o ../Assignment1/abstractcreature.cpp
 
-alchemistslaboratory.o: ../Assignment1/alchemistslaboratory.cpp ../Assignment1/alchemistslaboratory.h
+alchemistslaboratory.o: ../Assignment1/alchemistslaboratory.cpp ../Assignment1/alchemistslaboratory.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h \
+		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o alchemistslaboratory.o ../Assignment1/alchemistslaboratory.cpp
 
 basicdungeonlevel.o: ../Assignment1/basicdungeonlevel.cpp ../Assignment1/basicdungeonlevel.h
@@ -806,16 +807,16 @@ basicdungeonlevel.o: ../Assignment1/basicdungeonlevel.cpp ../Assignment1/basicdu
 basicdungeonlevelbuilder.o: ../Assignment1/basicdungeonlevelbuilder.cpp ../Assignment1/basicdungeonlevelbuilder.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o basicdungeonlevelbuilder.o ../Assignment1/basicdungeonlevelbuilder.cpp
 
-blockeddoorway.o: ../Assignment1/blockeddoorway.cpp ../Assignment1/blockeddoorway.h
+blockeddoorway.o: ../Assignment1/blockeddoorway.cpp ../Assignment1/blockeddoorway.h \
+		../Assignment1/doorway.h \
+		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o blockeddoorway.o ../Assignment1/blockeddoorway.cpp
 
 consumable.o: ../Assignment1/consumable.cpp ../Assignment1/consumable.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o consumable.o ../Assignment1/consumable.cpp
 
-direction.o: ../Assignment1/direction.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o direction.o ../Assignment1/direction.cpp
-
-doorway.o: ../Assignment1/doorway.cpp ../Assignment1/doorway.h
+doorway.o: ../Assignment1/doorway.cpp ../Assignment1/doorway.h \
+		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o doorway.o ../Assignment1/doorway.cpp
 
 dungeonlevel.o: ../Assignment1/dungeonlevel.cpp ../Assignment1/dungeonlevel.h \
@@ -833,7 +834,11 @@ dungeonlevelbuilder.o: ../Assignment1/dungeonlevelbuilder.cpp ../Assignment1/dun
 		../Assignment1/dungeonlevel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dungeonlevelbuilder.o ../Assignment1/dungeonlevelbuilder.cpp
 
-enchantedlibrary.o: ../Assignment1/enchantedlibrary.cpp ../Assignment1/enchantedlibrary.h
+enchantedlibrary.o: ../Assignment1/enchantedlibrary.cpp ../Assignment1/enchantedlibrary.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h \
+		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o enchantedlibrary.o ../Assignment1/enchantedlibrary.cpp
 
 game.o: ../Assignment1/game.cpp ../Assignment1/game.h \
@@ -848,7 +853,9 @@ game.o: ../Assignment1/game.cpp ../Assignment1/game.h \
 item.o: ../Assignment1/item.cpp ../Assignment1/item.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o item.o ../Assignment1/item.cpp
 
-lockeddoor.o: ../Assignment1/lockeddoor.cpp ../Assignment1/lockeddoor.h
+lockeddoor.o: ../Assignment1/lockeddoor.cpp ../Assignment1/lockeddoor.h \
+		../Assignment1/doorway.h \
+		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o lockeddoor.o ../Assignment1/lockeddoor.cpp
 
 magicaldungeonlevel.o: ../Assignment1/magicaldungeonlevel.cpp ../Assignment1/magicaldungeonlevel.h
@@ -878,16 +885,28 @@ menuinterface.o: ../Assignment1/menuinterface.cpp ../Assignment1/menuinterface.h
 		../Assignment1/dungeonlevel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o menuinterface.o ../Assignment1/menuinterface.cpp
 
-onewaydoor.o: ../Assignment1/onewaydoor.cpp ../Assignment1/onewaydoor.h
+onewaydoor.o: ../Assignment1/onewaydoor.cpp ../Assignment1/onewaydoor.h \
+		../Assignment1/doorway.h \
+		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o onewaydoor.o ../Assignment1/onewaydoor.cpp
 
-opendoorway.o: ../Assignment1/opendoorway.cpp ../Assignment1/opendoorway.h
+opendoorway.o: ../Assignment1/opendoorway.cpp ../Assignment1/opendoorway.h \
+		../Assignment1/doorway.h \
+		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o opendoorway.o ../Assignment1/opendoorway.cpp
 
-quartzchamber.o: ../Assignment1/quartzchamber.cpp ../Assignment1/quartzchamber.h
+quartzchamber.o: ../Assignment1/quartzchamber.cpp ../Assignment1/quartzchamber.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h \
+		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o quartzchamber.o ../Assignment1/quartzchamber.cpp
 
-rockchamber.o: ../Assignment1/rockchamber.cpp ../Assignment1/rockchamber.h
+rockchamber.o: ../Assignment1/rockchamber.cpp ../Assignment1/rockchamber.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h \
+		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o rockchamber.o ../Assignment1/rockchamber.cpp
 
 rockwall.o: ../Assignment1/rockwall.cpp ../Assignment1/rockwall.h
@@ -899,7 +918,10 @@ room.o: ../Assignment1/room.cpp ../Assignment1/room.h \
 		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o room.o ../Assignment1/room.cpp
 
-roomedge.o: ../Assignment1/roomedge.cpp ../Assignment1/roomedge.h
+roomedge.o: ../Assignment1/roomedge.cpp ../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o roomedge.o ../Assignment1/roomedge.cpp
 
 wall.o: ../Assignment1/wall.cpp ../Assignment1/wall.h

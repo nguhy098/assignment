@@ -12,7 +12,6 @@ SOURCES += \
         basicdungeonlevelbuilder.cpp \
         blockeddoorway.cpp \
         consumable.cpp \
-        direction.cpp \
         doorway.cpp \
         dungeonlevel.cpp \
         dungeonlevelbuilder.cpp \

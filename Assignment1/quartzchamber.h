@@ -1,11 +1,12 @@
 #ifndef QUARTZCHAMBER_H
 #define QUARTZCHAMBER_H
+#include "room.h"
 
-
-class QuartzChamber
+class QuartzChamber : public Room
 {
 public:
-    QuartzChamber();
+    QuartzChamber(int id);
+    std::string desciption();
 };
 
 #endif // QUARTZCHAMBER_H

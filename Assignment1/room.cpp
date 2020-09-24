@@ -10,11 +10,6 @@ Room::Room(const int id): _id{id}{
 
 }
 
-
-
-
-
-
 enum class Direction: unsigned {
     North = 0,
     South = 1,

@@ -1,11 +1,17 @@
 #ifndef LOCKEDDOOR_H
 #define LOCKEDDOOR_H
+#include "doorway.h"
 
-
-class LockedDoor
+class LockedDoor : public Doorway
 {
 public:
     LockedDoor();
+    char dislayCharacter() const override;
+    bool isEntrance() override;
+    bool isExit() override;
+private:
+    bool isEn;
+    bool isEx;
 };
 
 #endif // LOCKEDDOOR_H

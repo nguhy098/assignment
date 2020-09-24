@@ -1,11 +1,12 @@
 #ifndef ENCHANTEDLIBRARY_H
 #define ENCHANTEDLIBRARY_H
+#include "room.h"
 
-
-class EnchantedLibrary
+class EnchantedLibrary : public Room
 {
 public:
-    EnchantedLibrary();
+    EnchantedLibrary(int id);
+    std::string desciption();
 };
 
 #endif // ENCHANTEDLIBRARY_H

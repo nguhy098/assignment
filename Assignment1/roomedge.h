@@ -2,14 +2,17 @@
 #define ROOMEDGE_H
 #include <ostream>
 #include <string>
-
+#include "room.h"
 class RoomEdge
 {
 public:
     RoomEdge();
     std::string descriprtion() const;
-    char displayCharacter() const;
+    virtual char dislayCharacter() const;
     bool isPassage() const;
+    Room::Direction: unsigned{};
+private:
+
 
 };
 

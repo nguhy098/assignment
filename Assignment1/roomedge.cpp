@@ -1,4 +1,5 @@
 #include "roomedge.h"
+#include "room.h"
 
 RoomEdge::RoomEdge()
 {
@@ -7,11 +8,16 @@ RoomEdge::RoomEdge()
 std::string RoomEdge::descriprtion() const{
     return "description";
 }
-char RoomEdge::displayCharacter() const{
-    return 0;
+
+char RoomEdge::dislayCharacter() const
+{
+
+
+
 }
+
 bool RoomEdge::isPassage() const{
-    if(DoorWay::connect(opposite)){
+
     return true;
 }
 

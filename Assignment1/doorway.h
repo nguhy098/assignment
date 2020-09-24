@@ -1,16 +1,20 @@
 #ifndef DOORWAY_H
 #define DOORWAY_H
 #include <ostream>
+#include "roomedge.h"
 
-
-class Doorway
+class Doorway : public RoomEdge
 {
 public:
     Doorway();
     Doorway(const Doorway& other) = default;
-    void connect();
-    bool isEntrance();
-    bool isExit();
+    void connect(Doorway*);
+    virtual bool isEntrance();
+    virtual bool isExit();
+    char dislayCharacter() const override;
+
+private:
+    Doorway* _opposite;
 };
 
 #endif // DOORWAY_H
