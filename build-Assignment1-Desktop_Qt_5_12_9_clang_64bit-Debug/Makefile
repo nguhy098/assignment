@@ -808,7 +808,13 @@ alchemistslaboratory.o: ../Assignment1/alchemistslaboratory.cpp ../Assignment1/a
 basicdungeonlevel.o: ../Assignment1/basicdungeonlevel.cpp ../Assignment1/basicdungeonlevel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o basicdungeonlevel.o ../Assignment1/basicdungeonlevel.cpp
 
-basicdungeonlevelbuilder.o: ../Assignment1/basicdungeonlevelbuilder.cpp ../Assignment1/basicdungeonlevelbuilder.h
+basicdungeonlevelbuilder.o: ../Assignment1/basicdungeonlevelbuilder.cpp ../Assignment1/basicdungeonlevelbuilder.h \
+		../Assignment1/dungeonlevelbuilder.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h \
+		../Assignment1/roomedge.h \
+		../Assignment1/dungeonlevel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o basicdungeonlevelbuilder.o ../Assignment1/basicdungeonlevelbuilder.cpp
 
 blockeddoorway.o: ../Assignment1/blockeddoorway.cpp ../Assignment1/blockeddoorway.h \
@@ -858,7 +864,12 @@ game.o: ../Assignment1/game.cpp ../Assignment1/game.h \
 		../Assignment1/item.h \
 		../Assignment1/abstractcreature.h \
 		../Assignment1/roomedge.h \
-		../Assignment1/dungeonlevel.h
+		../Assignment1/dungeonlevel.h \
+		../Assignment1/wall.h \
+		../Assignment1/blockeddoorway.h \
+		../Assignment1/doorway.h \
+		../Assignment1/monster.h \
+		../Assignment1/lockeddoor.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o game.o ../Assignment1/game.cpp
 
 item.o: ../Assignment1/item.cpp ../Assignment1/item.h
@@ -875,7 +886,13 @@ lockeddoor.o: ../Assignment1/lockeddoor.cpp ../Assignment1/lockeddoor.h \
 magicaldungeonlevel.o: ../Assignment1/magicaldungeonlevel.cpp ../Assignment1/magicaldungeonlevel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o magicaldungeonlevel.o ../Assignment1/magicaldungeonlevel.cpp
 
-magicaldungeonlevelbuilder.o: ../Assignment1/magicaldungeonlevelbuilder.cpp ../Assignment1/magicaldungeonlevelbuilder.h
+magicaldungeonlevelbuilder.o: ../Assignment1/magicaldungeonlevelbuilder.cpp ../Assignment1/magicaldungeonlevelbuilder.h \
+		../Assignment1/dungeonlevelbuilder.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h \
+		../Assignment1/roomedge.h \
+		../Assignment1/dungeonlevel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o magicaldungeonlevelbuilder.o ../Assignment1/magicaldungeonlevelbuilder.cpp
 
 magicwall.o: ../Assignment1/magicwall.cpp ../Assignment1/magicwall.h \
@@ -892,7 +909,8 @@ main.o: ../Assignment1/main.cpp ../Assignment1/menuinterface.h \
 		../Assignment1/item.h \
 		../Assignment1/abstractcreature.h \
 		../Assignment1/roomedge.h \
-		../Assignment1/dungeonlevel.h
+		../Assignment1/dungeonlevel.h \
+		../Assignment1/game.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Assignment1/main.cpp
 
 menuinterface.o: ../Assignment1/menuinterface.cpp ../Assignment1/menuinterface.h \
@@ -901,7 +919,8 @@ menuinterface.o: ../Assignment1/menuinterface.cpp ../Assignment1/menuinterface.h
 		../Assignment1/item.h \
 		../Assignment1/abstractcreature.h \
 		../Assignment1/roomedge.h \
-		../Assignment1/dungeonlevel.h
+		../Assignment1/dungeonlevel.h \
+		../Assignment1/game.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o menuinterface.o ../Assignment1/menuinterface.cpp
 
 monster.o: ../Assignment1/monster.cpp ../Assignment1/monster.h \

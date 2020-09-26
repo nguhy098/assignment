@@ -8,8 +8,7 @@ class MenuInterface
 public:
     MenuInterface();
     MenuInterface(const MenuInterface &) = default;
-
-    std::string ExampLevel();
+    MenuInterface(std::ostream display, std::istream );
     void displayWelcome(const std::string &author, const std::string &title);
     void run();
     DungeonLevelBuilder* Random(std::string name, int width, int height);

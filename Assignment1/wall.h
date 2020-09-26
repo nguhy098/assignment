@@ -1,7 +1,7 @@
 #ifndef WALL_H
 #define WALL_H
 #include <ostream>
-#include <roomedge.h>
+#include "roomedge.h"
 
 class Wall : public RoomEdge
 {

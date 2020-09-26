@@ -13,7 +13,7 @@ public:
     Game();
     Game(const Game& other) = default;
     Game instance();
-    const Game& other() const;
+    //const Game& other() const;
     void setDungeonType(DungeonLevelBuilder);
     void createExampleLevel();
     void createRandomLevel(std::string name, int width, int height);
@@ -36,6 +36,6 @@ std::ostream &operator<<(std::ostream &out, const Game &pt);
 
 
 
-std::ostream &operator<<(std::ostream &out, const Game &pt);
+
 
 #endif // GAME_H

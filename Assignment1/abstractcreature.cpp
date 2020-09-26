@@ -1,5 +1,7 @@
 #include "abstractcreature.h"
 
+AbstractCreature::AbstractCreature(){}
+
 AbstractCreature::AbstractCreature(std::string name): _name{name}
 {
 
@@ -14,5 +16,7 @@ char AbstractCreature::displayCharacter() const
 }
 AbstractCreature AbstractCreature::clone() const
 {
-
+    AbstractCreature* newAbstractCreature = new AbstractCreature();
+    newAbstractCreature->name() = this->name();
+    return *newAbstractCreature;
 }

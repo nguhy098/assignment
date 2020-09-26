@@ -5,6 +5,8 @@
 #include <iostream>
 #include "item.h"
 
+using namespace std;
+
 class Consumable : public Item
 {
 public:

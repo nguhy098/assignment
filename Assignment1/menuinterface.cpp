@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "room.h"
+#include "game.h"
 using namespace std;
 
 
@@ -12,37 +13,46 @@ MenuInterface::MenuInterface() : _author{}, _title{}
 {
 
 }
+MenuInterface MenuInterface(std::ostream display, std::istream input)
+{
 
+}
 
 void MenuInterface::displayWelcome(const std::string &author, const std::string &title){
     _title = title;
     _author = author;
-    std::fstream input("Welcome to:");
-    getline(input, _title);
-    std::fstream input1("           Developed by");
-    getline(input1, _author);
-    std::fstream input4("       COMP 3023 Software Development with C++");
+    cout << "Welcome to: ";
+    cin >> _title;
+    cout <<"        Developed by ";
+    cin >> _author;
+    cout << "   COMP 3023 Software Development with C++" << endl;
+
+    //std::fstream input("Welcome to:");
+    //getline(input, _title);
+    //std::fstream input1("           Developed by");
+    //getline(input1, _author);
+    //std::fstream input4("       COMP 3023 Software Development with C++");
 }
-std::string MenuInterface::ExampLevel(){
-    cout << "+----I----+  +---------+  +---------+"
-            "|         |  |         |  |         |"
-            "|         >--<         X--X   M L   |"
-            "|         |  |         |  |         |"
-            "+----v----+  +----v----+  +----v----+"
-             "     |            |            |     "
-            "+----v----+  +----^----+  +----@----+"
-            "|         |  |         |  |         |"
-            "|         >-->   M L   >--<         |"
-            "|         |  |         |  |         |"
-            "+----X----+  +----v----+  +---------+"
-            "     |            |                  "
-            "+----X----+  +----^----+  +---------+"
-            "|         |  |         |  |         |"
-            "|     L   @--@         >--<   M*    |"
-            "|         |  |         |  |         |"
-            "+---------+  +---------+  +---------+";
-    return "";
-}
+
+
+    //cout << "+----I----+  +---------+  +---------+"
+            //"|         |  |         |  |         |"
+            //"|         >--<         X--X   M L   |"
+            //"|         |  |         |  |         |"
+            //"+----v----+  +----v----+  +----v----+"
+            // "     |            |            |     "
+            //"+----v----+  +----^----+  +----@----+"
+            //"|         |  |         |  |         |"
+            //"|         >-->   M L   >--<         |"
+            //"|         |  |         |  |         |"
+            //"+----X----+  +----v----+  +---------+"
+            //"     |            |                  "
+            //"+----X----+  +----^----+  +---------+"
+            //"|         |  |         |  |         |"
+            //"|     L   @--@         >--<   M*    |"
+            //"|         |  |         |  |         |"
+            //"+---------+  +---------+  +---------+";
+
 DungeonLevelBuilder *MenuInterface::Random(std::string name, int width, int height){
     _name = name;
     _width = width;
@@ -81,13 +91,15 @@ DungeonLevelBuilder *MenuInterface::Random(std::string name, int width, int heig
 void MenuInterface::run() {
     char input;
     ofstream f;
-    f << """What would you like to do? "
-            "   (g)enerate the example level"
-            "   (r)andom dungeon level"
-            "   (q)uit";
+    cout << """What would you like to do? \n"
+            "   (g)enerate the example level \n"
+            "   (r)andom dungeon level \n"
+            "   (q)uit \n";
     cin >> input;
+    //Game g;
     if (input == 'g'){
-        ExampLevel();
+        cout<<"Creating Example Dungeon Level... "<< endl;
+        //g.createExampleLevel();
 
     }
     else if (input == 'r'){
@@ -105,10 +117,10 @@ void MenuInterface::run() {
     }
     char userinput;
     ofstream f1;
-    f1 <<"What would you like to do?"
-           "    (d)escribe the dungeon level"
-           "    (v)iew the dungeon level"
-           "    (r)eturn to the main menu";
+    cout <<"What would you like to do? \n"
+           "    (d)escribe the dungeon level \n"
+           "    (v)iew the dungeon level \n"
+           "    (r)eturn to the main menu \n";
     cin >> userinput;
     if(userinput == 'd'){
         cin >> _name;
@@ -132,7 +144,7 @@ void MenuInterface::run() {
     }
     char userinput2;
     ofstream f3;
-    f3 <<"What would you like to do?"
+    cout <<"What would you like to do?"
            "    (d)escribe a room"
            "    (r)eturn to previous menu";
     cin >> userinput2;

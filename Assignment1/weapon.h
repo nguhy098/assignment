@@ -12,7 +12,8 @@ class Weapon : public Item
 public:
     Weapon();
     Item clone() const override;
-
+private:
+    std::string _name;
 };
 
 #endif // WEAPON_H

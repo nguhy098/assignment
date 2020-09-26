@@ -15,6 +15,7 @@ public:
 
 private:
     Doorway* _opposite;
+    char _i;
 };
 
 #endif // DOORWAY_H
