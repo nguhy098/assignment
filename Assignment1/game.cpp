@@ -1,7 +1,9 @@
 #include "game.h"
 #include <random>
 #include <ctime>
+#include "wall.h"
 
+using namespace std;
 Game::Game()
 {
 
@@ -22,7 +24,9 @@ void Game::displayLevel(std::string display)
 {
     _display = display;
 }
-void createExampleLevel();
+void createExampleLevel(){
+
+}
 void setDungeonType(DungeonLevelBuilder);
 
 

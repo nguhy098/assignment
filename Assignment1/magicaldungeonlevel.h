@@ -11,6 +11,7 @@ private:
     std::string _name;
     int _width;
     int _height;
+    std::string _desciption;
 };
 
 #endif // MAGICALDUNGEONLEVEL_H

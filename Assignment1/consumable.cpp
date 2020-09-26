@@ -5,3 +5,10 @@ Consumable::Consumable()
 {
 
 }
+
+Item Consumable::clone() const
+{
+
+}
+
+

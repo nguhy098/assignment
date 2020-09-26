@@ -3,15 +3,17 @@
 #include <ostream>
 #include <string>
 #include "room.h"
+
 class RoomEdge
 {
 public:
     RoomEdge();
-    std::string descriprtion() const;
+    virtual std::string descriprtion() const;
     virtual char dislayCharacter() const;
     bool isPassage() const;
-    Room::Direction: unsigned{};
+
 private:
+    char _i;
 
 
 };

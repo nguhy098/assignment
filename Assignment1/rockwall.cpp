@@ -4,3 +4,8 @@ RockWall::RockWall()
 {
 
 }
+
+std::string RockWall::description() const
+{
+    return "Rock Wall";
+}

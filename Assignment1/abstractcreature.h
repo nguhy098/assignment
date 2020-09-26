@@ -6,8 +6,9 @@
 class AbstractCreature
 {
 public:
+    AbstractCreature();
     AbstractCreature(std::string name);
-    AbstractCreature clone() const;
+    virtual AbstractCreature clone() const;
     std::string name() const;
     char displayCharacter() const;
 private:

@@ -3,13 +3,15 @@
 #include <ostream>
 #include <string>
 #include <iostream>
+#include "item.h"
 
 using namespace  std;
-class Weapon
+
+class Weapon : public Item
 {
 public:
     Weapon();
-    std::string WeaponItem();
+    Item clone() const override;
 
 };
 

@@ -4,3 +4,9 @@ Weapon::Weapon()
 {
 
 }
+
+Item Weapon::clone() const
+{
+
+}
+

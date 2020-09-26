@@ -3,12 +3,13 @@
 #include <ostream>
 #include <string>
 #include <iostream>
+#include "item.h"
 
-class Consumable
+class Consumable : public Item
 {
 public:
     Consumable();
-    std::string ConsumableItem();
+    Item clone() const override;
 };
 
 #endif // CONSUMABLE_H

@@ -1,4 +1,4 @@
-#include "basicdungeonlevel.h"
+﻿#include "basicdungeonlevel.h"
 
 BasicDungeonLevel::BasicDungeonLevel(std::string name, int width, int height):
     _name{name}, _width{width}, _height{height}
@@ -7,6 +7,6 @@ BasicDungeonLevel::BasicDungeonLevel(std::string name, int width, int height):
 }
 std::string BasicDungeonLevel::description() const
 {
-
+    return _description;
 
 }

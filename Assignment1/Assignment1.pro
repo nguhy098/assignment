@@ -24,6 +24,7 @@ SOURCES += \
         magicwall.cpp \
         main.cpp \
         menuinterface.cpp \
+        monster.cpp \
         onewaydoor.cpp \
         opendoorway.cpp \
         quartzchamber.cpp \
@@ -52,6 +53,7 @@ HEADERS += \
     magicaldungeonlevelbuilder.h \
     magicwall.h \
     menuinterface.h \
+    monster.h \
     onewaydoor.h \
     opendoorway.h \
     quartzchamber.h \

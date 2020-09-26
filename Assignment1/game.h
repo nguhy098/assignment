@@ -12,6 +12,7 @@ class Game
 public:
     Game();
     Game(const Game& other) = default;
+    Game instance();
     const Game& other() const;
     void setDungeonType(DungeonLevelBuilder);
     void createExampleLevel();
@@ -20,7 +21,6 @@ public:
     double randomDouble();
 
 private:
-
     std::string _name;
     int _width;
     int _height;

@@ -7,6 +7,7 @@
 
 Room::Room(const int id): _id{id}{
     _newItem = NULL;
+    _newCreature = NULL;
 
 }
 

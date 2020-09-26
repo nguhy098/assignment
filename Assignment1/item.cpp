@@ -7,8 +7,8 @@ std::string Item::name() const{
     return _name;
 }
 char Item::displayCharacter() const{
-    return _display;
+    return 'L';
 }
 Item Item::clone() const {
-    return _weapon + _consumable;
+    //return _weapon + _consumable;
 }

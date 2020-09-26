@@ -10,13 +10,14 @@ class DungeonLevelBuilder
 {
 public:
     enum class MoveConstraints: unsigned {};
-    DungeonLevelBuilder(std::string name, int width, int height);
+    DungeonLevelBuilder();
+    virtual void buildDungeonLevel(std::string name, int width, int height);
     virtual Room* buildRoom(int id) const;
     virtual void buildDoorway(Room* origin, Room* destination, Room::Direction direction, MoveConstraints constraints);
     virtual void buildEntrance(Room* room, Room::Direction direction);
     virtual void buildExit(Room* room, Room::Direction direction);
-    void buildItem(Room*);
-    void buildCreature(Room*);
+    virtual void buildItem(Room*);
+    virtual void buildCreature(Room*);
     DungeonLevel getDungonLevel();
     virtual DungeonLevel* GetDungeonLevel() {return 0;}
 

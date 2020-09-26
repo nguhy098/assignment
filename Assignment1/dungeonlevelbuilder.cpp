@@ -6,9 +6,15 @@
 
 using namespace std;
 
-DungeonLevelBuilder::DungeonLevelBuilder(std::string name, int width, int height):
-    _name{name}, _width{width}, _height{height}, _origin{0}, _room{0}
+DungeonLevelBuilder::DungeonLevelBuilder()
 {
+}
+
+void DungeonLevelBuilder::buildDungeonLevel(string name, int width, int height)
+{
+    _name = name;
+    _width = width;
+    _height = height;
 }
 
 enum class MoveConstraints : unsigned{

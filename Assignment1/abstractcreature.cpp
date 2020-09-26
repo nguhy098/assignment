@@ -10,9 +10,9 @@ std::string AbstractCreature::name() const
 }
 char AbstractCreature::displayCharacter() const
 {
-    return _display;
+    return 'M';
 }
 AbstractCreature AbstractCreature::clone() const
 {
-    return _monster;
+
 }

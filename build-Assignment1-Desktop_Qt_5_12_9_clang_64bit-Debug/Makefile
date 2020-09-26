@@ -70,6 +70,7 @@ SOURCES       = ../Assignment1/abstractcreature.cpp \
 		../Assignment1/magicwall.cpp \
 		../Assignment1/main.cpp \
 		../Assignment1/menuinterface.cpp \
+		../Assignment1/monster.cpp \
 		../Assignment1/onewaydoor.cpp \
 		../Assignment1/opendoorway.cpp \
 		../Assignment1/quartzchamber.cpp \
@@ -97,6 +98,7 @@ OBJECTS       = abstractcreature.o \
 		magicwall.o \
 		main.o \
 		menuinterface.o \
+		monster.o \
 		onewaydoor.o \
 		opendoorway.o \
 		quartzchamber.o \
@@ -310,6 +312,7 @@ DIST          = ../../../u/5.12.9/clang_64/mkspecs/features/spec_pre.prf \
 		magicaldungeonlevelbuilder.h \
 		magicwall.h \
 		menuinterface.h \
+		monster.h \
 		onewaydoor.h \
 		opendoorway.h \
 		quartzchamber.h \
@@ -336,6 +339,7 @@ DIST          = ../../../u/5.12.9/clang_64/mkspecs/features/spec_pre.prf \
 		../Assignment1/magicwall.cpp \
 		../Assignment1/main.cpp \
 		../Assignment1/menuinterface.cpp \
+		../Assignment1/monster.cpp \
 		../Assignment1/onewaydoor.cpp \
 		../Assignment1/opendoorway.cpp \
 		../Assignment1/quartzchamber.cpp \
@@ -809,14 +813,21 @@ basicdungeonlevelbuilder.o: ../Assignment1/basicdungeonlevelbuilder.cpp ../Assig
 
 blockeddoorway.o: ../Assignment1/blockeddoorway.cpp ../Assignment1/blockeddoorway.h \
 		../Assignment1/doorway.h \
-		../Assignment1/roomedge.h
+		../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o blockeddoorway.o ../Assignment1/blockeddoorway.cpp
 
-consumable.o: ../Assignment1/consumable.cpp ../Assignment1/consumable.h
+consumable.o: ../Assignment1/consumable.cpp ../Assignment1/consumable.h \
+		../Assignment1/item.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o consumable.o ../Assignment1/consumable.cpp
 
 doorway.o: ../Assignment1/doorway.cpp ../Assignment1/doorway.h \
-		../Assignment1/roomedge.h
+		../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o doorway.o ../Assignment1/doorway.cpp
 
 dungeonlevel.o: ../Assignment1/dungeonlevel.cpp ../Assignment1/dungeonlevel.h \
@@ -855,7 +866,10 @@ item.o: ../Assignment1/item.cpp ../Assignment1/item.h
 
 lockeddoor.o: ../Assignment1/lockeddoor.cpp ../Assignment1/lockeddoor.h \
 		../Assignment1/doorway.h \
-		../Assignment1/roomedge.h
+		../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o lockeddoor.o ../Assignment1/lockeddoor.cpp
 
 magicaldungeonlevel.o: ../Assignment1/magicaldungeonlevel.cpp ../Assignment1/magicaldungeonlevel.h
@@ -864,7 +878,12 @@ magicaldungeonlevel.o: ../Assignment1/magicaldungeonlevel.cpp ../Assignment1/mag
 magicaldungeonlevelbuilder.o: ../Assignment1/magicaldungeonlevelbuilder.cpp ../Assignment1/magicaldungeonlevelbuilder.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o magicaldungeonlevelbuilder.o ../Assignment1/magicaldungeonlevelbuilder.cpp
 
-magicwall.o: ../Assignment1/magicwall.cpp ../Assignment1/magicwall.h
+magicwall.o: ../Assignment1/magicwall.cpp ../Assignment1/magicwall.h \
+		../Assignment1/wall.h \
+		../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o magicwall.o ../Assignment1/magicwall.cpp
 
 main.o: ../Assignment1/main.cpp ../Assignment1/menuinterface.h \
@@ -885,14 +904,24 @@ menuinterface.o: ../Assignment1/menuinterface.cpp ../Assignment1/menuinterface.h
 		../Assignment1/dungeonlevel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o menuinterface.o ../Assignment1/menuinterface.cpp
 
+monster.o: ../Assignment1/monster.cpp ../Assignment1/monster.h \
+		../Assignment1/abstractcreature.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o monster.o ../Assignment1/monster.cpp
+
 onewaydoor.o: ../Assignment1/onewaydoor.cpp ../Assignment1/onewaydoor.h \
 		../Assignment1/doorway.h \
-		../Assignment1/roomedge.h
+		../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o onewaydoor.o ../Assignment1/onewaydoor.cpp
 
 opendoorway.o: ../Assignment1/opendoorway.cpp ../Assignment1/opendoorway.h \
 		../Assignment1/doorway.h \
-		../Assignment1/roomedge.h
+		../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o opendoorway.o ../Assignment1/opendoorway.cpp
 
 quartzchamber.o: ../Assignment1/quartzchamber.cpp ../Assignment1/quartzchamber.h \
@@ -909,7 +938,12 @@ rockchamber.o: ../Assignment1/rockchamber.cpp ../Assignment1/rockchamber.h \
 		../Assignment1/roomedge.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o rockchamber.o ../Assignment1/rockchamber.cpp
 
-rockwall.o: ../Assignment1/rockwall.cpp ../Assignment1/rockwall.h
+rockwall.o: ../Assignment1/rockwall.cpp ../Assignment1/rockwall.h \
+		../Assignment1/wall.h \
+		../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o rockwall.o ../Assignment1/rockwall.cpp
 
 room.o: ../Assignment1/room.cpp ../Assignment1/room.h \
@@ -924,10 +958,15 @@ roomedge.o: ../Assignment1/roomedge.cpp ../Assignment1/roomedge.h \
 		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o roomedge.o ../Assignment1/roomedge.cpp
 
-wall.o: ../Assignment1/wall.cpp ../Assignment1/wall.h
+wall.o: ../Assignment1/wall.cpp ../Assignment1/wall.h \
+		../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h \
+		../Assignment1/abstractcreature.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o wall.o ../Assignment1/wall.cpp
 
-weapon.o: ../Assignment1/weapon.cpp ../Assignment1/weapon.h
+weapon.o: ../Assignment1/weapon.cpp ../Assignment1/weapon.h \
+		../Assignment1/item.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o weapon.o ../Assignment1/weapon.cpp
 
 ####### Install

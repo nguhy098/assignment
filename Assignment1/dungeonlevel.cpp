@@ -27,8 +27,8 @@ std::string DungeonLevel::name() const{
     return _name;
 }
 std::string DungeonLevel::description() const{
-    return "description";
+    return _description;
 }
 std::string DungeonLevel::display() const{
-    return "display";
+    return _display;
 }

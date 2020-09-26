@@ -21,6 +21,8 @@ private:
     std::string _name;
     int _width;
     int _height;
+    std::string _description;
+    std::string _display;
 
 
 std::vector<Room*> room;

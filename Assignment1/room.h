@@ -8,10 +8,11 @@
 #include "memory"
 #include "array"
 
+class RoomEdge;
 class Room
 {
 public:
-    Room(const int id);
+    Room(int id);
     std::string description() const;
     std::string display() const;
     int id() const;
@@ -20,7 +21,8 @@ public:
     AbstractCreature* creature() const;
     void setCreature(AbstractCreature* newCreature);
 
-    void setNorth(RoomEdge* north);
+
+    void setNorth(RoomEdge*);
     RoomEdge* getNorth();
     void setSouth(RoomEdge* south);
     RoomEdge* getSouth();
