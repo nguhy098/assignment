@@ -5,6 +5,7 @@ MagicalDungeonLevel::MagicalDungeonLevel(std::string name, int width, int height
 {
 
 }
+
 std::string MagicalDungeonLevel::description() const{
     return _desciption;
 }

@@ -6,7 +6,7 @@ LockedDoor::LockedDoor()
     isEx = false;
 }
 
-char LockedDoor::dislayCharacter() const
+char LockedDoor::dislayCharacter()
 {
     return '@';
 }

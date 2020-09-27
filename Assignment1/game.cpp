@@ -7,6 +7,8 @@
 #include "blockeddoorway.h"
 #include "monster.h"
 #include "lockeddoor.h"
+#include "onewaydoor.h"
+
 
 using namespace std;
 Game::Game()
@@ -14,9 +16,14 @@ Game::Game()
 
 }
 
-Game Game::instance()
+static Game* INSTANCE = nullptr;
+Game *Game::instance()
 {
-
+   if(INSTANCE == nullptr){
+       Game* game = new Game();
+       INSTANCE = game;
+   }
+   return INSTANCE;
 }
 
 double Game::randomDouble()
@@ -24,17 +31,20 @@ double Game::randomDouble()
     return _realDistribution(_randomGenerator);
 
 }
+
 void Game::createRandomLevel(std::string name, int width, int height)
 {
     _name = name;
     _width = width;
     _height = height;
 }
+
 void Game::displayLevel(std::string display)
 {
     _display = display;
 }
-void createExampleLevel(){
+
+void Game::createExampleLevel(){
 
     RoomEdge re; //+
     Wall w; // - or |
@@ -43,13 +53,14 @@ void createExampleLevel(){
     Item i; // L
     LockedDoor ld; //@
     Doorway dw; // <>^v
+    OneWayDoor owd;
     //1
     cout << re.dislayCharacter();
 
     for(int i = 0; i<4; i++){
         cout << w.dislayCharacter();
     }
-    // DungeonLevel Entrance "I"
+    cout << owd.dislayCharacter();
     for(int i = 0; i<4; i++){
         cout << w.dislayCharacter();
     }
@@ -69,11 +80,11 @@ void createExampleLevel(){
     }
     //3
 
-    cout << "\n" << w.dislayCharacter()<<"         " << re.dislayCharacter();
+    cout << "\n" << w.dislayCharacter()<<"         " << dw.dislayCharacter();
     for(int i = 0; i<2; i++){
         cout << w.dislayCharacter();
     }
-    cout << re.dislayCharacter() << "         ";
+    cout << dw.dislayCharacter() << "         ";
 
     cout << bd.dislayCharacter();
     for(int i = 0; i<2; i++){
@@ -118,6 +129,7 @@ void createExampleLevel(){
         cout<< "     "<< w.dislayCharacter() << "     ";
         cout<< "  ";
     }
+    cout << "\n";
 
     //7
     cout<< re.dislayCharacter();
@@ -151,13 +163,14 @@ void createExampleLevel(){
         cout << w.dislayCharacter() <<"         "<< w.dislayCharacter();
         cout << "  ";
     }
+    cout <<"\n";
     //9
     cout << w.dislayCharacter() << "         " << dw.dislayCharacter();
     for(int i =0; i<2;i++){
         cout << w.dislayCharacter();
     }
     cout << dw.dislayCharacter() << "   " << m.displayCharacter() << " "
-         << i.displayCharacter() <<"   "<<w.dislayCharacter();
+         << i.displayCharacter() <<"   "<<dw.dislayCharacter();
     for(int i =0; i<2;i++){
         cout << w.dislayCharacter();
     }
@@ -168,6 +181,7 @@ void createExampleLevel(){
         cout << w.dislayCharacter() <<"         "<< w.dislayCharacter();
         cout << "  ";
     }
+    cout << "\n";
 
     //11
     cout << re.dislayCharacter();
@@ -190,7 +204,8 @@ void createExampleLevel(){
     for(int i =0; i<9;i++){
         cout << w.dislayCharacter();
     }
-    cout <<"\n";
+    cout << re.dislayCharacter() << endl;
+
 
     //12
     for(int i =0; i<2; i++){
@@ -220,7 +235,7 @@ void createExampleLevel(){
     for(int i =0; i<9;i++){
         cout << w.dislayCharacter();
     }
-    cout <<"\n";
+    cout << re.dislayCharacter() << endl;
 
 
    //14
@@ -228,6 +243,7 @@ void createExampleLevel(){
         cout << w.dislayCharacter() <<"         "<< w.dislayCharacter();
         cout << "  ";
     }
+    cout << "\n";
 
     //15
     cout << w.dislayCharacter() << "     "<< i.displayCharacter()
@@ -239,14 +255,15 @@ void createExampleLevel(){
     for(int i =0; i<2;i++){
         cout << w.dislayCharacter();
     }
-    cout << dw.dislayCharacter() << "   " << "//Monster*    "
-         << "//DungeonlevelExit" <<endl;
+    cout << dw.dislayCharacter() << "   " << m.displayCharacter() << "     "
+         << owd.dislayCharacter() <<endl;
 
     //16
     for(int i =0; i<3; i++){
         cout << w.dislayCharacter() <<"         "<< w.dislayCharacter();
         cout << "  ";
     }
+    cout << "\n";
 
     //17
     for(int i=0; i<3; i++){
@@ -257,10 +274,11 @@ void createExampleLevel(){
         cout << re.dislayCharacter();
         cout <<"  ";
     }
-
+    cout << "\n";
 
 }
-void setDungeonType(DungeonLevelBuilder id)
+
+void Game::setDungeonType(DungeonLevelBuilder id)
 {
 
 }

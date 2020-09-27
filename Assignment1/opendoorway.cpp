@@ -6,7 +6,7 @@ OpenDoorWay::OpenDoorWay()
     isEx= false;
 }
 
-char OpenDoorWay::dislayCharacter() const
+char OpenDoorWay::dislayCharacter()
 {
     return '^';
 }

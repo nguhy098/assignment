@@ -5,8 +5,8 @@ BasicDungeonLevel::BasicDungeonLevel(std::string name, int width, int height):
 {
 
 }
+
 std::string BasicDungeonLevel::description() const
 {
     return _description;
-
 }

@@ -11,7 +11,7 @@ public:
     void connect(Doorway*);
     virtual bool isEntrance();
     virtual bool isExit();
-    char dislayCharacter() const override;
+    char dislayCharacter() override;
 
 private:
     Doorway* _opposite;

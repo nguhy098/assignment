@@ -6,15 +6,22 @@ OneWayDoor::OneWayDoor()
     isEx = false;
 }
 
-char OneWayDoor::dislayCharacter() const
+char OneWayDoor::dislayCharacter()
 {
+    if(isEntrance()){
+        return 'I';
+    }
+    else if(isExit()){
+        return 'O';
+    }
     return '^';
 }
 
 bool OneWayDoor::isEntrance()
 {
-    return isEntrance();
+    return true;
 }
-bool OneWayDoor::isExit(){
-    return isExit();
+bool OneWayDoor::isExit()
+{
+    return true;
 }

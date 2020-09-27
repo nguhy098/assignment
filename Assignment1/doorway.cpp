@@ -9,15 +9,18 @@ void Doorway::connect(Doorway* opposite)
 {
     _opposite = opposite;
 }
+
 bool Doorway::isEntrance()
 {
-
-}
-bool Doorway::isExit(){
-
+    return true;
 }
 
-char Doorway::dislayCharacter() const
+bool Doorway::isExit()
+{
+    return true;
+}
+
+char Doorway::dislayCharacter()
 {
     Room r{_i};
     if(r.getNorth()){

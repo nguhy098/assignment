@@ -1,0 +1,39 @@
+\hypertarget{class_basic_dungeon_level_builder}{}\doxysection{Basic\+Dungeon\+Level\+Builder Class Reference}
+\label{class_basic_dungeon_level_builder}\index{BasicDungeonLevelBuilder@{BasicDungeonLevelBuilder}}
+Inheritance diagram for Basic\+Dungeon\+Level\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_basic_dungeon_level_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_basic_dungeon_level_builder_aff432da9a74f765f798443c4fdb1c37b}\label{class_basic_dungeon_level_builder_aff432da9a74f765f798443c4fdb1c37b}} 
+void {\bfseries build\+Dungeon\+Level} (std\+::string name, int width, int height) override
+\item 
+\mbox{\Hypertarget{class_basic_dungeon_level_builder_ac41832e165494b1bf3d344a72e9b9d70}\label{class_basic_dungeon_level_builder_ac41832e165494b1bf3d344a72e9b9d70}} 
+\mbox{\hyperlink{class_room}{Room}} $\ast$ {\bfseries build\+Room} (int id) override
+\item 
+\mbox{\Hypertarget{class_basic_dungeon_level_builder_a59e4546cb2e8c0efebbf0cc5dec5d6af}\label{class_basic_dungeon_level_builder_a59e4546cb2e8c0efebbf0cc5dec5d6af}} 
+void {\bfseries build\+Doorway} (\mbox{\hyperlink{class_room}{Room}} $\ast$origin, \mbox{\hyperlink{class_room}{Room}} $\ast$destination, Room\+::\+Direction direction, Move\+Constraints constraints) override
+\item 
+\mbox{\Hypertarget{class_basic_dungeon_level_builder_ae9903ef4254bab4f34c63817f81be45c}\label{class_basic_dungeon_level_builder_ae9903ef4254bab4f34c63817f81be45c}} 
+void {\bfseries build\+Entrance} (\mbox{\hyperlink{class_room}{Room}} $\ast$room, Room\+::\+Direction direction) override
+\item 
+\mbox{\Hypertarget{class_basic_dungeon_level_builder_abaf8a0bc332dc4e994b80ac5109400ab}\label{class_basic_dungeon_level_builder_abaf8a0bc332dc4e994b80ac5109400ab}} 
+void {\bfseries build\+Exit} (\mbox{\hyperlink{class_room}{Room}} $\ast$room, Room\+::\+Direction direction) override
+\item 
+\mbox{\Hypertarget{class_basic_dungeon_level_builder_a74be5ef5a9eb6f62ff3f363de56658a6}\label{class_basic_dungeon_level_builder_a74be5ef5a9eb6f62ff3f363de56658a6}} 
+void {\bfseries build\+Item} (\mbox{\hyperlink{class_room}{Room}} $\ast$item) override
+\item 
+\mbox{\Hypertarget{class_basic_dungeon_level_builder_a0bfd4cd8a3c16817d6fe985dbf6585a8}\label{class_basic_dungeon_level_builder_a0bfd4cd8a3c16817d6fe985dbf6585a8}} 
+void {\bfseries build\+Creature} (\mbox{\hyperlink{class_room}{Room}} $\ast$creature) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+basicdungeonlevelbuilder.\+h\item 
+basicdungeonlevelbuilder.\+cpp\end{DoxyCompactItemize}

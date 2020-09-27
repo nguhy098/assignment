@@ -6,7 +6,7 @@ BlockedDoorway::BlockedDoorway()
     isEx = false;
 }
 
-char BlockedDoorway::dislayCharacter() const
+char BlockedDoorway::dislayCharacter()
 {
     return 'X';
 }

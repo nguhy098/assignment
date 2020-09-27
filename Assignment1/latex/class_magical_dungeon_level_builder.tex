@@ -1,0 +1,39 @@
+\hypertarget{class_magical_dungeon_level_builder}{}\doxysection{Magical\+Dungeon\+Level\+Builder Class Reference}
+\label{class_magical_dungeon_level_builder}\index{MagicalDungeonLevelBuilder@{MagicalDungeonLevelBuilder}}
+Inheritance diagram for Magical\+Dungeon\+Level\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_magical_dungeon_level_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_magical_dungeon_level_builder_a076676053c833f7a2995f03aa6e9b4bd}\label{class_magical_dungeon_level_builder_a076676053c833f7a2995f03aa6e9b4bd}} 
+void {\bfseries build\+Dungeon\+Level} (std\+::string name, int width, int height) override
+\item 
+\mbox{\Hypertarget{class_magical_dungeon_level_builder_ad350031d4ffe88ea6d19c0fd1607450b}\label{class_magical_dungeon_level_builder_ad350031d4ffe88ea6d19c0fd1607450b}} 
+\mbox{\hyperlink{class_room}{Room}} $\ast$ {\bfseries build\+Room} (int id) override
+\item 
+\mbox{\Hypertarget{class_magical_dungeon_level_builder_a299394ac24dd35e917ba5553fad9d314}\label{class_magical_dungeon_level_builder_a299394ac24dd35e917ba5553fad9d314}} 
+void {\bfseries build\+Doorway} (\mbox{\hyperlink{class_room}{Room}} $\ast$origin, \mbox{\hyperlink{class_room}{Room}} $\ast$destination, Room\+::\+Direction direction, Move\+Constraints constraints) override
+\item 
+\mbox{\Hypertarget{class_magical_dungeon_level_builder_a0821b8eb217762f4159a4db58222b40b}\label{class_magical_dungeon_level_builder_a0821b8eb217762f4159a4db58222b40b}} 
+void {\bfseries build\+Entrance} (\mbox{\hyperlink{class_room}{Room}} $\ast$room, Room\+::\+Direction direction) override
+\item 
+\mbox{\Hypertarget{class_magical_dungeon_level_builder_aefeacb18627169afcf13a4b8c7d781e2}\label{class_magical_dungeon_level_builder_aefeacb18627169afcf13a4b8c7d781e2}} 
+void {\bfseries build\+Exit} (\mbox{\hyperlink{class_room}{Room}} $\ast$room, Room\+::\+Direction direction) override
+\item 
+\mbox{\Hypertarget{class_magical_dungeon_level_builder_a58fd4e0bd1428ee7f86cc29bfa49f3ee}\label{class_magical_dungeon_level_builder_a58fd4e0bd1428ee7f86cc29bfa49f3ee}} 
+void {\bfseries build\+Item} (\mbox{\hyperlink{class_room}{Room}} $\ast$item) override
+\item 
+\mbox{\Hypertarget{class_magical_dungeon_level_builder_a66eb3ca4441afc893dd4c4f50139258e}\label{class_magical_dungeon_level_builder_a66eb3ca4441afc893dd4c4f50139258e}} 
+void {\bfseries build\+Creature} (\mbox{\hyperlink{class_room}{Room}} $\ast$creature) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+magicaldungeonlevelbuilder.\+h\item 
+magicaldungeonlevelbuilder.\+cpp\end{DoxyCompactItemize}

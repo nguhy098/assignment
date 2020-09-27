@@ -6,7 +6,7 @@ class BlockedDoorway : public Doorway
 {
 public:
     BlockedDoorway();
-    char dislayCharacter() const override;
+    char dislayCharacter() override;
     bool isEntrance() override;
     bool isExit() override;
 private:

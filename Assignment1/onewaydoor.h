@@ -6,8 +6,7 @@ class OneWayDoor  : public Doorway
 {
 public:
     OneWayDoor();
-    void a();
-    char dislayCharacter() const override;
+    char dislayCharacter() override;
     bool isEntrance() override;
     bool isExit() override;
 

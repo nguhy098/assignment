@@ -16,7 +16,6 @@ void DungeonLevelBuilder::buildDungeonLevel(string name, int width, int height)
     _width = width;
     _height = height;
 }
-
 enum class MoveConstraints : unsigned{
     None = 0,
     OriginImpassable = 1,
@@ -24,36 +23,40 @@ enum class MoveConstraints : unsigned{
     OriginLocked = 4,
     DestinationLocked = 8,
 };
-Room* DungeonLevelBuilder::buildRoom(int id) const{
 
+Room* DungeonLevelBuilder::buildRoom(int id)
+{
+    _id = id;
 }
 
-void DungeonLevelBuilder::buildDoorway(Room *origin, Room *destination, Room::Direction direction, DungeonLevelBuilder::MoveConstraints constraints)
+void DungeonLevelBuilder::buildDoorway(Room *origin, Room *destination, Room::Direction direction, MoveConstraints constraints)
 {
-
+    _origin = origin;
+   direction = Room::Direction();
+   constraints = MoveConstraints();
 }
 
 void DungeonLevelBuilder::buildEntrance(Room *room, Room::Direction direction)
 {
-
+    _room = room;
+    direction = Room::Direction();
 }
 
 void DungeonLevelBuilder::buildExit(Room *room, Room::Direction direction)
 {
+    _room = room;
+    direction = Room::Direction();
+}
+void DungeonLevelBuilder::buildItem(Room* item)
+{
+    _item = item;
 
 }
-void buildEntrance(Room* room, Room::Direction direction){
-    DungeonLevelBuilder Doorway(std::string name, int width, int height);
-
-
+void DungeonLevelBuilder::buildCreature(Room* creature)
+{
+    _creature = creature;
 }
-void DungeonLevelBuilder::buildItem(Room* item){
-    rand();
-
-}
-void DungeonLevelBuilder::buildCreature(Room* creature){
-
-}
-DungeonLevel DungeonLevelBuilder::getDungonLevel(){
+DungeonLevel DungeonLevelBuilder::getDungonLevel()
+{
 
 }

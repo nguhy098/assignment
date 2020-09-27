@@ -10,7 +10,7 @@ std::string Wall::description() const
 
 }
 
-char Wall::dislayCharacter() const
+char Wall::dislayCharacter()
 {
     Room w{_i};
     if(w.getNorth() || w.getSouth()){
@@ -19,8 +19,6 @@ char Wall::dislayCharacter() const
     else if(w.getEast() || w.getWest()){
         return '|';
     }
-
-
 }
 
 bool Wall::isPassage()

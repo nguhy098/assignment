@@ -9,7 +9,7 @@ class RoomEdge
 public:
     RoomEdge();
     virtual std::string descriprtion() const;
-    virtual char dislayCharacter() const;
+    virtual char dislayCharacter();
     bool isPassage() const;
 
 private:

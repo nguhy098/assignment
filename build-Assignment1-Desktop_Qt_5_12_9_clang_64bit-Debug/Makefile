@@ -795,7 +795,12 @@ compiler_clean:
 
 ####### Compile
 
-abstractcreature.o: ../Assignment1/abstractcreature.cpp ../Assignment1/abstractcreature.h
+abstractcreature.o: ../Assignment1/abstractcreature.cpp ../Assignment1/abstractcreature.h \
+		../Assignment1/onewaydoor.h \
+		../Assignment1/doorway.h \
+		../Assignment1/roomedge.h \
+		../Assignment1/room.h \
+		../Assignment1/item.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o abstractcreature.o ../Assignment1/abstractcreature.cpp
 
 alchemistslaboratory.o: ../Assignment1/alchemistslaboratory.cpp ../Assignment1/alchemistslaboratory.h \
@@ -869,7 +874,8 @@ game.o: ../Assignment1/game.cpp ../Assignment1/game.h \
 		../Assignment1/blockeddoorway.h \
 		../Assignment1/doorway.h \
 		../Assignment1/monster.h \
-		../Assignment1/lockeddoor.h
+		../Assignment1/lockeddoor.h \
+		../Assignment1/onewaydoor.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o game.o ../Assignment1/game.cpp
 
 item.o: ../Assignment1/item.cpp ../Assignment1/item.h

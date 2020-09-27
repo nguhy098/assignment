@@ -1,0 +1,50 @@
+\hypertarget{class_dungeon_level_builder}{}\doxysection{Dungeon\+Level\+Builder Class Reference}
+\label{class_dungeon_level_builder}\index{DungeonLevelBuilder@{DungeonLevelBuilder}}
+Inheritance diagram for Dungeon\+Level\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dungeon_level_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_a0f5629eafdfd8d5e3c8b1eb1ad59da32}\label{class_dungeon_level_builder_a0f5629eafdfd8d5e3c8b1eb1ad59da32}} 
+enum {\bfseries Move\+Constraints} \+: unsigned 
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_a9c1461694dac0fee3d4b79e50f733866}\label{class_dungeon_level_builder_a9c1461694dac0fee3d4b79e50f733866}} 
+virtual void {\bfseries build\+Dungeon\+Level} (std\+::string name, int width, int height)
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_a3fde99772463a28dbb6f928cf7e846c1}\label{class_dungeon_level_builder_a3fde99772463a28dbb6f928cf7e846c1}} 
+virtual \mbox{\hyperlink{class_room}{Room}} $\ast$ {\bfseries build\+Room} (int id)
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_a38ac77b1f4d8a862101c10386fc25a0a}\label{class_dungeon_level_builder_a38ac77b1f4d8a862101c10386fc25a0a}} 
+virtual void {\bfseries build\+Doorway} (\mbox{\hyperlink{class_room}{Room}} $\ast$origin, \mbox{\hyperlink{class_room}{Room}} $\ast$destination, Room\+::\+Direction direction, Move\+Constraints constraints)
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_a8d51a5275e7f72ef4fd71512d3f2780f}\label{class_dungeon_level_builder_a8d51a5275e7f72ef4fd71512d3f2780f}} 
+virtual void {\bfseries build\+Entrance} (\mbox{\hyperlink{class_room}{Room}} $\ast$room, Room\+::\+Direction direction)
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_aad319eb4f45539940140fab650528aee}\label{class_dungeon_level_builder_aad319eb4f45539940140fab650528aee}} 
+virtual void {\bfseries build\+Exit} (\mbox{\hyperlink{class_room}{Room}} $\ast$room, Room\+::\+Direction direction)
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_a4b60e5797db7ff9d3a1dcfbfd9769f63}\label{class_dungeon_level_builder_a4b60e5797db7ff9d3a1dcfbfd9769f63}} 
+virtual void {\bfseries build\+Item} (\mbox{\hyperlink{class_room}{Room}} $\ast$item)
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_aec57f93d1e8b8a747a2f5cf8b6668795}\label{class_dungeon_level_builder_aec57f93d1e8b8a747a2f5cf8b6668795}} 
+virtual void {\bfseries build\+Creature} (\mbox{\hyperlink{class_room}{Room}} $\ast$creature)
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_a83d5d3084b22395ff803f4e07c155bbe}\label{class_dungeon_level_builder_a83d5d3084b22395ff803f4e07c155bbe}} 
+\mbox{\hyperlink{class_dungeon_level}{Dungeon\+Level}} {\bfseries get\+Dungon\+Level} ()
+\item 
+\mbox{\Hypertarget{class_dungeon_level_builder_afc523a8f47b258791ae49376c8956050}\label{class_dungeon_level_builder_afc523a8f47b258791ae49376c8956050}} 
+virtual \mbox{\hyperlink{class_dungeon_level}{Dungeon\+Level}} $\ast$ {\bfseries Get\+Dungeon\+Level} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+dungeonlevelbuilder.\+h\item 
+dungeonlevelbuilder.\+cpp\end{DoxyCompactItemize}

@@ -4,6 +4,7 @@ QuartzChamber::QuartzChamber(int id) : Room(id)
 {
 
 }
-std::string QuartzChamber::desciption(){
+std::string QuartzChamber::desciption()
+{
     return "Quatz Chamber";
 }
