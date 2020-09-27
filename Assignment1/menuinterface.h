@@ -11,7 +11,7 @@ public:
     MenuInterface(std::ostream display, std::istream );
     void displayWelcome(const std::string &author, const std::string &title);
     void run();
-    DungeonLevelBuilder* Random(std::string name, int width, int height);
+    DungeonLevelBuilder* Random();
 private:
     std::string _author;
     std::string _title;

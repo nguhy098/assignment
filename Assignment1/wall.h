@@ -13,6 +13,7 @@ public:
     bool isPassage();
 private:
     char _i;
+    std::string _description;
 
 };
 

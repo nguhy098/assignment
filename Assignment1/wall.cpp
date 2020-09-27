@@ -7,7 +7,7 @@ Wall::Wall()
 
 std::string Wall::description() const
 {
-
+    return _description;
 }
 
 char Wall::dislayCharacter()
@@ -23,5 +23,5 @@ char Wall::dislayCharacter()
 
 bool Wall::isPassage()
 {
-
+    return false;
 }

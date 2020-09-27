@@ -8,9 +8,7 @@ using namespace std;
 int main()
 {
    auto menu = new MenuInterface();
-   menu -> displayWelcome("Kate", "Dungeon Game");
+   menu -> displayWelcome("Hoang Chau Nguyen", "Dungeon Level Builder");
    menu ->run();
-
-
 
 }
