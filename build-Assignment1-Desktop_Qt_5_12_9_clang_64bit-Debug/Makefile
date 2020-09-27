@@ -819,7 +819,8 @@ basicdungeonlevelbuilder.o: ../Assignment1/basicdungeonlevelbuilder.cpp ../Assig
 		../Assignment1/item.h \
 		../Assignment1/abstractcreature.h \
 		../Assignment1/roomedge.h \
-		../Assignment1/dungeonlevel.h
+		../Assignment1/dungeonlevel.h \
+		../Assignment1/doorway.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o basicdungeonlevelbuilder.o ../Assignment1/basicdungeonlevelbuilder.cpp
 
 blockeddoorway.o: ../Assignment1/blockeddoorway.cpp ../Assignment1/blockeddoorway.h \
@@ -980,7 +981,8 @@ room.o: ../Assignment1/room.cpp ../Assignment1/room.h \
 roomedge.o: ../Assignment1/roomedge.cpp ../Assignment1/roomedge.h \
 		../Assignment1/room.h \
 		../Assignment1/item.h \
-		../Assignment1/abstractcreature.h
+		../Assignment1/abstractcreature.h \
+		../Assignment1/doorway.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o roomedge.o ../Assignment1/roomedge.cpp
 
 wall.o: ../Assignment1/wall.cpp ../Assignment1/wall.h \
