@@ -10,8 +10,6 @@ class Monster : public AbstractCreature
 public:
     Monster();
     AbstractCreature clone() const override;
-
-
 };
 
 #endif // MONSTER_H
